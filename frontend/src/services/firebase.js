@@ -3,15 +3,15 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getAnalytics, isSupported } from 'firebase/analytics';
 
-// Firebase configuration from environment or project settings
+// Securely read Firebase credentials from environment variables (.env)
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyBxmsHfWBsVLA7foz89sk77LTx2HGSraHM",
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "taskflow-37e31.firebaseapp.com",
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "taskflow-37e31",
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "taskflow-37e31.firebasestorage.app",
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "186043765044",
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:186043765044:web:5e9d8e829ea72657019561",
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "G-NMNKPEQCLV",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || '',
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || '',
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || '',
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || '',
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '',
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || '',
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || '',
 };
 
 // Initialize Firebase App
