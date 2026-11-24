@@ -65,4 +65,11 @@ const startServer = async () => {
   }
 };
 
-startServer();
+// Export app for serverless platforms (like Vercel)
+module.exports = app;
+
+// Run standalone server if started directly via node
+if (require.main === module) {
+  startServer();
+}
+
